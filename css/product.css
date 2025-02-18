@@ -1,0 +1,26 @@
+main {
+  background-color: #f8f6f0;
+}
+.product_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box1 {
+  background-color: white;
+  color: black;
+}
+
+.box2 {
+  color: black;
+}
+
+.box2_1 {
+  background-color: #98e1c4;
+  color: black;
+}
+
+.box2_2 {
+  background-color: white;
+  color: black;
+}

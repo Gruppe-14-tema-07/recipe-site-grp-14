@@ -1,0 +1,94 @@
+main {
+  margin: 0 5%;
+}
+
+body {
+  background-color: var(--secondary);
+}
+
+html {
+  /************************FARVEKODER**************************/
+  --primary: #98e1c4;
+  --secondary: #f8f6f0;
+  --accent: white;
+  --dark: black;
+}
+
+/************************space-størrelser**************************/
+
+h1 {
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+h2 {
+  font-family: "Anonymous Pro", serif;
+}
+
+h3 {
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+h4 {
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+p {
+  font-family: "Inter", serif;
+}
+
+a {
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+/************************FONTE**************************/
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.inter {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.anonymous-pro-regular {
+  font-family: "Anonymous Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"> */
+
+/************************FOOTER**************************/
+
+footer {
+  background-color: black;
+  color: #f8f6f0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 3rem;
+}
+
+.footerbutton {
+  background-color: #f8f6f0;
+  height: 60px;
+  width: 200px;
+  border: 13px solid #98e1c4;
+  margin-top: 20px;
+}
+.footerbutton a {
+  text-decoration: none;
+  color: var(--dark);
+  font-family: "Anonymous Pro", serif;
+}
+
+/************************FOOTER**************************/
