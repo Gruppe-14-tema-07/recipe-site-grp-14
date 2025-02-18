@@ -50,7 +50,7 @@ function showProducts() {
       cuisineContainer.innerHTML = cuisineArray.join(", ");
 
       // **Filtering logic - return all items (do nothing)**
-      const filteredRecipes = products.recipes.filter((recipe) => recipe.cuisine === "Asian");
+      const filteredRecipes = products.recipes.filter((recipe) => recipe.cuisine === "Italian");
 
       //   console.log("filteredRecipes er ", filteredRecipes);
 
