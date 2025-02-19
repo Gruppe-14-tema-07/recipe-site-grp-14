@@ -1,26 +1,109 @@
-main {
-  background-color: #f8f6f0;
-}
-.product_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+* {
+  box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
+main {
+  background-color: #f8f6f0;
+  padding: 2rem;
+}
+
+/******************* Grid *******************/
+
+@media (min-width: 800px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/******************* Typografi *******************/
+
+h4 {
+  margin-right: 10px;
+}
+
+/******************* Billede boks *******************/
 .box1 {
   background-color: white;
   color: black;
 }
 
+/******************* Højre grid *******************/
 .box2 {
-  color: black;
+  position: relative;
 }
 
-.box2_1 {
-  background-color: #98e1c4;
-  color: black;
+/******************* Grøn boks *******************/
+@media (min-width: 800px) {
+  .box2_1 {
+    background-color: #98e1c4;
+    color: black;
+    padding: 20px;
+    line-height: 0;
+  }
 }
+@media (max-width: 800px) {
+  .box2_1 {
+    background-color: #98e1c4;
+    color: black;
+    padding: 20px;
+    line-height: 1;
+  }
+}
+
+.box2_1 li {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Sørger for vertikal justering */
+}
+
+/******************* Hvid boks *******************/
 
 .box2_2 {
   background-color: white;
   color: black;
+  padding: 20px;
+}
+
+/******************* Ingredientlist *******************/
+.box2_b4 li {
+  list-style: decimal;
+  font-family: "Inter", serif;
+}
+
+/******************* BOBLER*******************/
+.box2_b1 {
+  background-color: var(--primary);
+  border-radius: 100%;
+  position: absolute;
+  text-align: center;
+  justify-items: center;
+  right: 5px;
+  transform: translateY(10%);
+  padding: 20px;
+}
+
+.box2_b2 {
+  background-color: var(--primary);
+  border-radius: 100%;
+  position: absolute;
+  text-align: center;
+  justify-items: center;
+  right: 110px;
+  transform: translateY(150%);
+  font-size: 0.8dvw;
+  padding: 10px;
 }
