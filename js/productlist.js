@@ -6,12 +6,39 @@ const mealType = new URLSearchParams(window.location.search).get("mealType");
 let mealArray = [];
 let cuisineArray = [];
 
-showProducts();
+// Fetch all products (to get meal types)
+fetch("https://dummyjson.com/recipes")
+  .then((response) => response.json())
+  .then((products) => {
+    products.recipes.forEach((data) => {
+      if (Array.isArray(data.mealType)) {
+        data.mealType.forEach((type) => {
+          if (!mealArray.includes(type) && type !== "Snack") {
+            mealArray.push(type);
+          }
+        });
+      }
+    });
 
+    // Display meal types
+    mealTypeContainer.innerHTML = mealArray
+      .map((data) => {
+        return `
+          <a href="productlist.html?mealType=${data}">
+            <div class="flexcol">
+              <img src="img/${data}.png" alt="${data}">
+              <p>${data}</p>
+            </div>
+          </a>`;
+      })
+      .join(" ");
+  })
+  .catch((error) => console.error("Error fetching meal types:", error));
+
+// Fetch filtered products
 function showProducts() {
-  // Fetch products
-  let fetchUrl = `https://dummyjson.com/recipes`;
-  if (window.location.search.includes(`mealType`)) {
+  let fetchUrl = "https://dummyjson.com/recipes";
+  if (mealType) {
     fetchUrl += `/meal-type/${mealType}`;
   }
 
@@ -19,18 +46,12 @@ function showProducts() {
     .then((response) => response.json())
     .then((products) => {
       productContainer.innerHTML = "";
+      cuisineArray = [];
 
-      products.recipes.forEach((data) => {
-        // Ensure mealType is an array before using forEach
-        if (Array.isArray(data.mealType)) {
-          data.mealType.forEach((type) => {
-            if (!mealArray.includes(type) && type !== "Snack") {
-              mealArray.push(type);
-            }
-          });
-        }
+      const filteredRecipes = products.recipes.filter((recipe) => recipe.cuisine === "Italian");
 
-        // Ensure cuisine is an array before using forEach
+      // Extract unique cuisines
+      filteredRecipes.forEach((data) => {
         if (Array.isArray(data.cuisine)) {
           data.cuisine.forEach((type) => {
             if (!cuisineArray.includes(type)) {
@@ -42,29 +63,37 @@ function showProducts() {
         }
       });
 
-      console.log("Unique meal types:", mealArray);
       console.log("Unique cuisines:", cuisineArray);
-
-      // Display meal types
-      mealTypeContainer.innerHTML = mealArray.join(", ");
       cuisineContainer.innerHTML = cuisineArray.join(", ");
-
-      // **Filtering logic - return all items (do nothing)**
-      const filteredRecipes = products.recipes.filter((recipe) => recipe.cuisine === "Italian");
-
-      //   console.log("filteredRecipes er ", filteredRecipes);
 
       // Generate HTML for filtered recipes
       const htmlProducts = filteredRecipes.map((data) => {
-        return `
-        <div class="box">
-          ${data.soldout ? '<h1 class="stock udsolgtskrift"> UDSOLGT</h1>' : ""}
-          <img class="img" src="https://cdn.dummyjson.com/recipe-images/${data.id}.webp" alt="${data.name}">
-          <a href="product.html?id=${data.id}">Single Recipe</a>
-        </div>`;
+        let time = data.prepTimeMinutes + data.cookTimeMinutes;
+        return `<div class="recipeBox">
+                  <div class="recipeImg">
+                    <img class="recipeInnerImg" src="https://cdn.dummyjson.com/recipe-images/${data.id}.webp" alt="${data.name}">
+                  </div>
+                  <div class="info">
+                    <h2 class="time">${time} mins</h2>
+                    <h2 class="recipeBoxName">${data.name}</h2>
+                    <p class="tags">${data.tags ? data.tags.join(", ") : ""}</p>
+                    <div class="flexrow iconbox" style="justify-content: space-around;">
+                      <div class="flexrow">
+                        <img class="star" src="svg/Star.svg" alt="Rating star">
+                        <h2 class="rating">${data.rating}</h2>
+                      </div>
+                      <div class="flexrow">
+                        <img class="serving" src="svg/Servings.svg" alt="Servings icon">
+                        <h2 class="servingsText">${data.servings} Servings</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
       });
 
       productContainer.innerHTML = htmlProducts.join(" ");
     })
-    .catch((error) => console.error("Error fetching data:", error));
+    .catch((error) => console.error("Error fetching filtered recipes:", error));
 }
+
+showProducts();

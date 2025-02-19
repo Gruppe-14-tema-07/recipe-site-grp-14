@@ -64,15 +64,15 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.box {
-  background-color: #a5ebcf;
-  height: 200px;
-  width: 100px;
-}
-
 .mealType {
+  width: 500px;
   margin: 0 auto;
   margin-top: 3rem;
+}
+
+.mealType a {
+  text-decoration: none;
+  color: var(--dark);
 }
 
 .categotyContainer {
@@ -81,7 +81,6 @@ body {
 }
 
 .recipeBox {
-  width: 290px;
   position: relative;
   border-radius: 10px;
   background-color: #fff;
@@ -94,19 +93,22 @@ body {
 }
 
 .recipeInnerImg {
-  scale: 1.6;
-  transform: translate(0, 10%);
+  scale: 1.8;
+  transform: translate(0, 20%);
 }
 
 .time {
   position: absolute;
   background-color: #a5ebcf;
   top: 5%;
-  left: 68%;
+  left: 65%;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 0rem;
   height: 85px;
   width: 85px;
+  font-size: 115%;
+  text-align: center;
+  padding: 1.75rem 0 0 0;
 }
 
 .info {
@@ -124,7 +126,7 @@ body {
 }
 
 .rating {
-  font-size: 110%;
+  font-size: 100%;
   padding: 0.5rem;
 }
 
@@ -134,7 +136,7 @@ body {
 }
 
 .servingsText {
-  font-size: 110%;
+  font-size: 100%;
   padding: 0.5rem;
 }
 
