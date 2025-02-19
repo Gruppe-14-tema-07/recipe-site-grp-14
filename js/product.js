@@ -34,37 +34,35 @@ fetch(fetchUrl)
                         <p>${products.caloriesPerServing}</p>
                     </li>
                     <li>
-                        <h4>#</h4>
-                        <p>${products.tags}</p>
+<div class="tags-container">
+    <p>${products.tags.map((tag) => `<h4>#</h4>${tag}`).join(" ")}</p>
+</div>
+
                     </li>
                 </ul>
 
                 <div class="box2_2">
                     <div class="box2_b1">
                         <h2>Prep</h2>
-                        <h2>00 min.</h2>
+                        <h2>${products.prepTimeMinutes} min.</h2>
                     </div>
 
                     <div class="box2_b2">
                         <h2>Cook</h2>
-                        <h2>00 min.</h2>
+                        <h2>${products.cookTimeMinutes} min.</h2>
                     </div>
 
                     <div class="box2_b3">
                         <h3>Ingredients</h3>
                         <ul>
-                            <li>
-                                <p>${products.ingredients}</p>
-                            </li>
+                                ${products.ingredients.map((ingredient) => `<li><p>${ingredient}</p></li>`).join("")}
                         </ul>
                     </div>
 
                     <div class="box2_b4">
                         <h3>Instructions</h3>
                         <ul>
-                            <li>
-                                <p>${products.instructions}</p>
-                            </li>
+                                ${products.instructions.map((instruction) => `<li><p>${instruction}</p></li>`).join("")}
                         </ul>
                     </div>
                 </div>

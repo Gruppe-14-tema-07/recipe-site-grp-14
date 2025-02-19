@@ -35,6 +35,16 @@ h4 {
   margin-right: 10px;
 }
 
+p {
+  font-size: small;
+}
+
+.box2_b3 p {
+  font-family: "Anonymous Pro", serif;
+  font-style: italic;
+  line-height: 10px;
+}
+
 /******************* Billede boks *******************/
 .box1 {
   background-color: white;
@@ -70,6 +80,23 @@ h4 {
   align-items: center; /* Sørger for vertikal justering */
 }
 
+.tags-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Lidt afstand mellem # og tags */
+  font-family: "Anonymous Pro", serif;
+  font-size: small;
+}
+
+.tags-container h4 {
+  font-weight: bold;
+}
+
+.tags-container p {
+  font-weight: normal;
+  margin: 0;
+}
+
 /******************* Hvid boks *******************/
 
 .box2_2 {
@@ -84,30 +111,68 @@ h4 {
   font-family: "Inter", serif;
 }
 
-/******************* BOBLER*******************/
-.box2_b1 {
-  background-color: var(--primary);
-  border-radius: 100%;
-  /* height: 100px;
-  width: 100px; */
-  position: absolute;
+.box2_b4 h3 {
   text-align: center;
   justify-items: center;
-  right: 5px;
-  transform: translateY(10%);
-  padding: 20px;
+  font-size: x-large;
 }
 
-.box2_b2 {
-  background-color: var(--primary);
-  border-radius: 100%;
-  /* height: 50px;
-  width: 50px; */
-  position: absolute;
-  text-align: center;
-  justify-items: center;
-  right: 110px;
-  transform: translateY(150%);
-  font-size: 0.8dvw;
-  padding: 10px;
+/******************* BOBLER*******************/
+
+@media (min-width: 800px) {
+  .box2_b1 {
+    background-color: var(--primary);
+    border-radius: 100%;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    text-align: center;
+    justify-items: center;
+    right: 5px;
+    font-size: 1.1dvw;
+    transform: translateY(0%);
+  }
+
+  .box2_b2 {
+    background-color: var(--primary);
+    border-radius: 100%;
+    height: 85px;
+    width: 85px;
+    position: absolute;
+    text-align: center;
+    justify-items: center;
+    right: 110px;
+    transform: translateY(120%);
+    font-size: 0.7dvw;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .box2_b1 {
+    background-color: var(--primary);
+    border-radius: 100%;
+    height: 85px;
+    width: 85px;
+    position: absolute;
+    text-align: center;
+    justify-items: center;
+    right: 5px;
+    font-size: 2.5dvw;
+    transform: translateY(0%);
+  }
+
+  .box2_b2 {
+    background-color: var(--primary);
+    border-radius: 100%;
+    height: 47px;
+    width: 47px;
+    position: absolute;
+    text-align: center;
+    justify-items: center;
+    right: 85px;
+    transform: translateY(120%);
+    font-size: 1dvw;
+    padding: 10px;
+  }
 }
