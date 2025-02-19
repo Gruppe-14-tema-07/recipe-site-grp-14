@@ -2,6 +2,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 main {
   margin: 0;
@@ -15,7 +18,7 @@ main {
   grid-template-rows: 1fr 1fr 1fr 1fr auto;
   gap: 2px;
   position: relative;
-  background-image: url(https://cdn.dummyjson.com/recipe-images/10.webp);
+  background-image: url(https://cdn.dummyjson.com/recipe-images/3.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,8 +34,8 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
 #hero_box1 {
@@ -44,7 +47,7 @@ main {
 
 #hero_box2 {
   position: relative;
-  grid-column: 2/7;
+  grid-column: 2/6;
   grid-row: 3/4;
   z-index: 1;
 }
@@ -52,6 +55,7 @@ main {
 #hero_button {
   grid-column: 5/6;
   grid-row: 4/5;
+  z-index: 1;
 }
 
 #header_box1 {
@@ -62,9 +66,14 @@ main {
   height: fit-content;
 }
 
+#header_box1 img {
+  max-height: 140px;
+  max-width: fit-content;
+}
+
 #header_box2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: fit-content;
@@ -73,21 +82,58 @@ main {
 .index_hero h1 {
   font-size: 10dvw;
   color: white;
+  /* text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8); */
+
   margin: 0;
 }
 
+.hero-btn {
+  background-color: #f8f6f0;
+  padding: 24px 48px;
+  border: 13px solid #98e1c4;
+}
+
+#hero_button a {
+  text-decoration: none;
+  color: var(--dark);
+  font-family: "Anonymous Pro", serif;
+  font-size: 35px;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+}
+
 .index_hero h2 {
-  font-size: 5dvw;
+  font-size: 50px;
   color: var(--primary);
   margin: 0;
+  /* text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8); */
 }
 @media screen and (max-width: 800px) {
   .index_hero {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     height: 40vh;
+    padding: 40px 0;
   }
   nav {
     background-color: var(--primary);
     border-radius: 2rem;
+  }
+
+  .hero-btn {
+    padding: 12px 24px;
+  }
+
+  #hero_button a {
+    font-size: 20px;
+  }
+
+  .index_hero h2 {
+    font-size: 25px;
   }
 }
 
@@ -102,11 +148,6 @@ main {
 }
 
 /************************CARDS**************************/
-.grid_1-1-1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-}
 
 .decorative-line {
   border: none;
@@ -252,7 +293,7 @@ main {
 /************************25MIN**************************/
 
 .min_div {
-  margin-top: 10vh;
+  margin: 10vh 0;
   height: fit-content;
   background-color: white;
   padding: 50px 30px;
@@ -331,7 +372,7 @@ main {
 
 .read_button h3 {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 1.3rem;
 }
 
 #box1-2 div {
