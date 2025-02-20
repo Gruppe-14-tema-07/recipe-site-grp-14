@@ -100,40 +100,43 @@ fetch("https://dummyjson.com/recipes")
       .join(" ");
   });
 
-fetch("https://dummyjson.com/recipes?limit=4")
+fetch("https://dummyjson.com/recipes?limit=4&sortBy=reviewCount&order=desc") //fetch data med limit 4 elementer, og sorter samtidig by review count, Og sorter den med desc
   .then((response) => response.json())
   .then((data) => {
-    return data.recipes.sort((a, b) => b.reviewCount - a.reviewCount); // Sorter reviewCount fra Største til mindst
-  })
-  .then((topRecipes) => {
-    showProducts(topRecipes);
-    console.log("These are the top recipes: ", topRecipes);
+    const trendingRecipes = data.recipes;
+    showProducts(trendingRecipes);
   });
+// .then((topRecipes) => {
+//   showProducts(topRecipes);
+//   console.log("These are the top recipes: ", topRecipes);
+// });
 
-function showProducts(topRecipes) {
-  const markup = topRecipes
-    .map((data) => {
-      let time = data.prepTimeMinutes + data.cookTimeMinutes;
-      return `<div class="recipeBox">
+function showProducts(trendingRecipes) {
+  const markup = trendingRecipes
+    .map((element) => {
+      let time = element.prepTimeMinutes + element.cookTimeMinutes;
+      return `<a href="product.html?id=${element.id}">
+      <div class="recipeBox">
                   <div class="recipeImg">
-                    <img class="recipeInnerImg" src="https://cdn.dummyjson.com/recipe-images/${data.id}.webp" alt="${data.name}">
+                    <img class="recipeInnerImg" src="https://cdn.dummyjson.com/recipe-images/${element.id}.webp" alt="${element.name}">
                   </div>
                   <div class="info">
                     <h2 class="time">${time} mins</h2>
-                    <h2 class="recipeBoxName">${data.name}</h2>
-                    <p class="tags">${data.tags ? data.tags.join(", ") : ""}</p>
+                    <h2 class="recipeBoxName">${element.name}</h2>
+                    <p class="tags">${element.tags ? element.tags.join(", ") : ""}</p>
                     <div class="flexrow iconbox" style="justify-content: space-around;">
                       <div class="flexrow">
                         <img class="star" src="svg/Star.svg" alt="Rating star">
-                        <h2 class="rating">${data.rating}</h2>
+                        <h2 class="rating">${element.rating}</h2>
                       </div>
                       <div class="flexrow">
                         <img class="serving" src="svg/Servings.svg" alt="Servings icon">
-                        <h2 class="servingsText">${data.servings} Servings</h2>
+                        <h2 class="servingsText">${element.servings} Servings</h2>
                       </div>
                     </div>
                   </div>
-                </div> `;
+                </div>
+                 </a>`;
     })
     .join(" ");
 
