@@ -142,7 +142,7 @@ nav {
 }
 
 .menu a:hover {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .burger {
@@ -200,6 +200,9 @@ nav {
 
   nav.active .menu a {
     font-size: 24px;
+  }
+  nav.active .menu a:hover {
+    color: var(--secondary);
   }
 }
 

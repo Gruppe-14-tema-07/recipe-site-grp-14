@@ -100,7 +100,7 @@ fetch("https://dummyjson.com/recipes")
       .join(" ");
   });
 
-fetch("https://dummyjson.com/recipes?limit=4&sortBy=reviewCount&order=desc") //fetch data med limit 4 elementer, og sorter samtidig by review count, Og sorter den med desc
+fetch("https://dummyjson.com/recipes?sortBy=reviewCount&order=desc&limit=4") //fetch data med limit 4 elementer, og sorter samtidig by review count, Og sorter den med desc
   .then((response) => response.json())
   .then((data) => {
     const trendingRecipes = data.recipes;
