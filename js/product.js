@@ -15,7 +15,9 @@ fetch(fetchUrl)
     console.log("products", products);
     let time = products.prepTimeMinutes + products.cookTimeMinutes;
 
-    productContainer.innerHTML = `<div class="box1">
+    productContainer.innerHTML = `
+    
+    <div class="box1">
               <img src="https://cdn.dummyjson.com/recipe-images/${products.id}.webp" alt="${products.id}">
                 <h1>${products.name}</h1>
             </div>
