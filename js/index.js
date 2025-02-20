@@ -112,15 +112,14 @@ fetch("https://dummyjson.com/recipes?limit=4")
 
 function showProducts(topRecipes) {
   const markup = topRecipes
-    .map(
-      (data) => `
-    
-      <div class="recipeBox">
+    .map((data) => {
+      let time = data.prepTimeMinutes + data.cookTimeMinutes;
+      return `<div class="recipeBox">
                   <div class="recipeImg">
                     <img class="recipeInnerImg" src="https://cdn.dummyjson.com/recipe-images/${data.id}.webp" alt="${data.name}">
                   </div>
                   <div class="info">
-                    <h2 class="time">${data.time} mins</h2>
+                    <h2 class="time">${time} mins</h2>
                     <h2 class="recipeBoxName">${data.name}</h2>
                     <p class="tags">${data.tags ? data.tags.join(", ") : ""}</p>
                     <div class="flexrow iconbox" style="justify-content: space-around;">
@@ -134,8 +133,8 @@ function showProducts(topRecipes) {
                       </div>
                     </div>
                   </div>
-                </div> `
-    )
+                </div> `;
+    })
     .join(" ");
 
   container.innerHTML = markup;
