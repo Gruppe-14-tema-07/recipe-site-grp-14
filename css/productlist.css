@@ -186,6 +186,8 @@ a {
 
 .info {
   padding: 1rem;
+  display: grid;
+  grid-template-rows: 45px 35px;
 }
 
 .tags {
@@ -223,8 +225,12 @@ a {
 }
 
 @media (max-width: 800px) {
+  .main {
+    margin: 0 2%;
+  }
   .grid_4_1v2 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   .time {
     position: absolute;
@@ -256,11 +262,21 @@ a {
     border-radius: 10px;
   }
   .recipeBox {
-    width: 153px;
+    width: 100%;
   }
 
   .iconbox {
     flex-direction: column;
+  }
+  .info {
+    display: grid;
+    grid-template-rows: 55px minmax(45px, 90px);
+  }
+  .iconbox {
+    margin: 0;
+  }
+  .iconbox h2 {
+    margin-left: 1rem;
   }
 }
 
@@ -300,6 +316,11 @@ main {
   margin: 0 5%;
 }
 
+@media (max-width: 800px) {
+  .main {
+    margin: 0 2%;
+  }
+}
 /***************************** HERO BANNER *****************************/
 
 .index_hero {
