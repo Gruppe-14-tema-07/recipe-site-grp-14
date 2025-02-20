@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+#header_box1 img {
+  max-height: 140px;
+  max-width: fit-content;
+}
+
 img {
   width: 100%;
 }
@@ -11,7 +16,11 @@ main {
   padding: 2rem;
 }
 
-/******************* Grid *******************/
+html {
+  scroll-behavior: smooth;
+}
+
+/***************************** Grid *****************************/
 
 @media (min-width: 800px) {
   .product_container {
@@ -29,7 +38,7 @@ main {
   }
 }
 
-/******************* Typografi *******************/
+/***************************** Typografi *****************************/
 
 h4 {
   margin-right: 10px;
@@ -45,18 +54,18 @@ p {
   line-height: 10px;
 }
 
-/******************* Billede boks *******************/
+/***************************** Billede boks *****************************/
 .box1 {
   background-color: white;
   color: black;
 }
 
-/******************* Højre grid *******************/
+/***************************** Højre grid *****************************/
 .box2 {
   position: relative;
 }
 
-/******************* Grøn boks *******************/
+/***************************** Grøn boks *****************************/
 @media (min-width: 800px) {
   .box2_1 {
     background-color: #98e1c4;
@@ -97,7 +106,7 @@ p {
   margin: 0;
 }
 
-/******************* Hvid boks *******************/
+/***************************** Hvid boks *****************************/
 
 .box2_2 {
   background-color: white;
@@ -105,7 +114,7 @@ p {
   padding: 20px;
 }
 
-/******************* Ingredientlist *******************/
+/***************************** Ingredientlist *****************************/
 .box2_b4 li {
   list-style: decimal;
   font-family: "Inter", serif;
@@ -117,7 +126,7 @@ p {
   font-size: x-large;
 }
 
-/******************* BOBLER*******************/
+/***************************** BOBLER*****************************/
 
 @media (min-width: 800px) {
   .box2_b1 {
@@ -175,4 +184,61 @@ p {
     font-size: 1dvw;
     padding: 10px;
   }
+}
+
+/***************************** HERO BANNER *****************************/
+
+.hero_section {
+  background-color: #98e1c4;
+  width: 1200px;
+  height: 200px;
+}
+
+#hero_box1 {
+  position: relative;
+  grid-column: span 6;
+  grid-row: 2/3;
+  z-index: 2;
+}
+
+#header_box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
+#hero_box2 {
+  position: relative;
+  grid-column: 2/6;
+  grid-row: 3/4;
+  z-index: 1;
+}
+
+#header_box2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    background-color: var(--primary);
+    border-radius: 2rem;
+  }
+}
+
+.hero_section h1 {
+  font-size: 4dvw;
+  color: var(--dark);
+  margin: 0;
+}
+
+.hero_section h2 {
+  display: inline-grid;
+  font-size: 1.5dvw;
+  color: var(--secondary);
 }
