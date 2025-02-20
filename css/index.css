@@ -89,13 +89,16 @@ main {
 }
 
 .hero-btn {
+  display: flex;
+  align-items: center;
   background-color: #f8f6f0;
-  padding: 24px 48px;
+  padding: 10px 14px;
   border: 13px solid #98e1c4;
 }
 
 #hero_button a {
   text-decoration: none;
+  text-align: center;
   color: var(--dark);
   font-family: "Anonymous Pro", serif;
   font-size: 35px;
@@ -435,6 +438,12 @@ main {
   .grid_1-1-1-1 {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+  }
+
+  .grid2_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 
