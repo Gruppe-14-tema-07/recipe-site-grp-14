@@ -50,7 +50,7 @@ fetch("https://dummyjson.com/recipes")
     // Generate select dropdown for cuisines
     const selectorHTML = `
     <select class="cuisineSelect" id="filter">
-      <option value="all_items" selected>All Items</option>
+      <option value="all_items" selected>All Cuisines</option>
       ${cuisineArray.map((data) => `<option value="${data}">${data} Recipes</option>`).join("")}
     </select>
   `;
