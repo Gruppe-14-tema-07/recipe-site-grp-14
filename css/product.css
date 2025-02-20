@@ -284,7 +284,7 @@ p {
 
   .index_hero h1 {
     font-size: 7dvw;
-    color: var(--primary);
+    color: var(--dark);
     margin: 0 0;
   }
 
