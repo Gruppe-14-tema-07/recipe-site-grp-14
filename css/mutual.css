@@ -4,6 +4,7 @@ main {
 
 body {
   background-color: var(--secondary);
+  scroll-behavior: smooth;
 }
 
 html {
@@ -44,15 +45,15 @@ a {
 
 .plus-jakarta-sans {
   font-family: "Plus Jakarta Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
+  /* font-optical-sizing: auto;
+  font-weight: weight; */
   font-style: normal;
 }
 
 .inter {
   font-family: "Inter", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
+  /* font-optical-sizing: auto;
+  font-weight: weight; */
   font-style: normal;
 }
 

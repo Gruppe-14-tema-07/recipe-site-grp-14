@@ -15,6 +15,15 @@ body {
 }
 
 /************************Categori**************************/
+.air {
+  width: 100%;
+  height: 5rem;
+}
+
+.airS {
+  width: 100%;
+  height: 3rem;
+}
 
 .decorative-line {
   border: none;
@@ -49,6 +58,12 @@ body {
   gap: 20px;
 }
 
+.grid_4_1v2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
 .grid_3_1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -75,11 +90,54 @@ body {
 .mealType a {
   text-decoration: none;
   color: var(--dark);
+  transition: scale ease-in 0.1s;
+}
+
+.mealType a:hover {
+  scale: 1.02;
 }
 
 .categotyContainer {
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  .grid_4_1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mealType {
+    width: 330px;
+  }
+}
+
+/************************Button**************************/
+
+.outerButton {
+  margin: 0 auto;
+  width: 245px;
+  height: 60px;
+  background-color: #a5ebcf;
+  position: relative;
+}
+.innerButton {
+  position: absolute;
+  top: 15%;
+  left: 16%;
+  padding: 10px 40px;
+  margin: auto;
+  background-color: var(--secondary);
+  text-decoration: none;
+  color: var(--dark);
+  box-shadow: 4px 4px 0 var(--dark);
+  transition: top 0.1s ease-in, left 0.1s ease-in, box-shadow 0.1s ease-in;
+}
+
+.innerButton:hover {
+  top: 17%;
+  left: 17%;
+  box-shadow: none;
 }
 
 /************************RecipeCard**************************/
@@ -88,6 +146,11 @@ body {
   position: relative;
   border-radius: 10px;
   background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
 }
 
 .recipeImg {
@@ -99,6 +162,12 @@ body {
 .recipeInnerImg {
   scale: 1.8;
   transform: translate(0, 20%);
+  transition: scale ease-in 0.2s, filter ease-in 0.2s;
+}
+
+.recipeInnerImg:hover {
+  scale: 1.9;
+  filter: brightness(1.05);
 }
 
 .time {
@@ -153,4 +222,35 @@ body {
   font-size: 120%;
 }
 
-/************************HEADER**************************/
+@media (max-width: 800px) {
+  .grid_4_1v2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/************************Filter**************************/
+
+label {
+  font-family: "Plus Jakarta Sans", serif;
+  margin-right: 2rem;
+}
+
+.outerSelect {
+  width: 315px;
+  height: 60px;
+  background-color: #a5ebcf;
+  position: relative;
+}
+.innerSelect {
+  position: absolute;
+  top: 15%;
+  left: 11%;
+  padding: 10px 40px;
+  margin: auto;
+  background-color: var(--secondary);
+  text-decoration: none;
+  color: var(--dark);
+  box-shadow: 4px 4px 0 var(--dark);
+  transition: top 0.1s ease-in, left 0.1s ease-in, box-shadow 0.1s ease-in;
+}
+
