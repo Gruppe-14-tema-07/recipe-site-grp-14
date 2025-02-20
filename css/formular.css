@@ -151,6 +151,13 @@ textarea {
   /* text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8); */
 }
 @media screen and (max-width: 800px) {
+  .main_overview {
+    height: 165vh;
+  }
+  form {
+    width: 85%;
+    margin-right: 1rem;
+  }
   .index_hero {
     display: flex;
     justify-content: space-evenly;
