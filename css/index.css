@@ -154,7 +154,7 @@ main {
 
 .trending_div h2 {
   margin-bottom: 0.5rem;
-  font-size: 3vw;
+  font-size: 50px;
 }
 
 .trending_div p {
@@ -190,6 +190,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .trending_div h2 {
+    font-size: 35px;
   }
 }
 
