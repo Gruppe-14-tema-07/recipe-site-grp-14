@@ -147,291 +147,29 @@ main {
 .main_overview {
   margin: 0 5%;
 }
-
 .trending_div {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
+
+.trending_div h2 {
+  margin-bottom: 0.5rem;
+  font-size: 3vw;
+}
+
+.trending_div p {
+  margin-bottom: 0.5rem;
+}
+
 .grid2_1-1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
-.MyContainer {
-}
-
 /************************RecipeCard**************************/
 
-.recipeBox {
-  position: relative;
-  border-radius: 10px;
-  background-color: #fff;
-}
-
-.recipeImg {
-  overflow: hidden;
-  height: 400px;
-  border-radius: 10px;
-}
-
-.recipeInnerImg {
-  scale: 1.8;
-  transform: translate(0, 20%);
-}
-
-.time {
-  position: absolute;
-  background-color: #a5ebcf;
-  top: 5%;
-  left: 65%;
-  border-radius: 50%;
-  padding: 0rem;
-  height: 85px;
-  width: 85px;
-  font-size: 115%;
-  text-align: center;
-  padding: 1.75rem 0 0 0;
-}
-
-.info {
-  padding: 1rem;
-}
-
-.tags {
-  margin-top: 0.4rem;
-  opacity: 60%;
-}
-
-.star {
-  aspect-ratio: 1/1;
-  width: 30px;
-}
-
-.rating {
-  font-size: 100%;
-  padding: 0.5rem;
-}
-
-.serving {
-  aspect-ratio: 1/1;
-  width: 20px;
-}
-
-.servingsText {
-  font-size: 100%;
-  padding: 0.5rem;
-}
-
-.iconbox {
-  margin: 1rem auto;
-  margin-bottom: 0;
-}
-
-.recipeBoxName {
-  font-size: 120%;
-}
-
 /************************Categori**************************/
-
-.decorative-line {
-  border: none;
-  height: 0.17rem; /* Thickness of the line */
-  background-color: #000;
-  margin: 0.2rem 0; /* Space above and below the line */
-  margin-bottom: 0.5rem;
-  width: 200px;
-}
-
-.textcenter {
-  text-align: center;
-}
-
-.flexcol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flexcolv2 :last-child {
-  margin: auto auto 1rem 1rem;
-}
-
-.flexrow {
-  display: flex;
-}
-
-.grid_4_1 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.grid_3_1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.grid_1-1v2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.mealType {
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 3rem;
-}
-
-.mealType a {
-  text-decoration: none;
-  color: var(--dark);
-}
-
-.categotyContainer {
-  margin: 0 auto;
-  margin-bottom: 5rem;
-}
-
-/************************CARDS**************************/
-
-.decorative-line {
-  border: none;
-  height: 0.17rem; /* Thickness of the line */
-  background-color: #000;
-  margin: 0.2rem 0; /* Space above and below the line */
-  margin-bottom: 0.5rem;
-  width: 200px;
-}
-
-.textcenter {
-  text-align: center;
-}
-
-.flexcol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flexcolv2 :last-child {
-  margin: auto auto 1rem 1rem;
-}
-
-.flexrow {
-  display: flex;
-}
-
-.grid_4_1 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-/* .grid_3_1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-} */
-
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.grid_1-1v2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.box {
-  background-color: #a5ebcf;
-  height: 200px;
-  width: 100px;
-}
-
-.mealType {
-  margin: 0 auto;
-  margin-top: 3rem;
-}
-
-.categotyContainer {
-  margin: 0 auto;
-  margin-bottom: 5rem;
-}
-
-.recipeBox {
-  width: 290px;
-  position: relative;
-  border-radius: 10px;
-  background-color: #fff;
-}
-
-.recipeImg {
-  overflow: hidden;
-  height: 400px;
-  border-radius: 10px;
-}
-
-.recipeInnerImg {
-  scale: 1.6;
-  transform: translate(0, 10%);
-}
-
-.time {
-  position: absolute;
-  background-color: #a5ebcf;
-  top: 5%;
-  left: 68%;
-  border-radius: 50%;
-  padding: 1rem;
-  height: 85px;
-  width: 85px;
-}
-
-.info {
-  padding: 1rem;
-}
-
-.tags {
-  margin-top: 0.4rem;
-  opacity: 60%;
-}
-
-.star {
-  aspect-ratio: 1/1;
-  width: 30px;
-}
-
-.rating {
-  font-size: 110%;
-  padding: 0.5rem;
-}
-
-.serving {
-  aspect-ratio: 1/1;
-  width: 20px;
-}
-
-.servingsText {
-  font-size: 110%;
-  padding: 0.5rem;
-}
-
-.iconbox {
-  margin: 1rem auto;
-  margin-bottom: 0;
-}
-
-.recipeBoxName {
-  font-size: 120%;
-}
 
 @media screen and (max-width: 800px) {
   /************************CARDS**************************/
@@ -440,6 +178,14 @@ main {
     gap: 10px;
   }
 
+  .grid2_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .grid2_1-1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -567,7 +313,6 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-  /************************CARDS**************************/
   .grid_1-1-1-1 {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -602,12 +347,19 @@ main {
     transform: scaleX(1.04);
   }
 }
+
+@media (man-width: 1000px) {
+  .grid2_1-1-1-1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /************************25MIN**************************/
 
 /************************Button**************************/
-
-.buttonPos {
-  position: absolute;
-  top: 70%;
-  left: 70%;
+@media screen and (min-width: 800px) {
+  .buttonPos {
+    position: absolute;
+    top: 70%;
+    left: 65%;
+  }
 }
